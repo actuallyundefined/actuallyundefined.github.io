@@ -23,7 +23,7 @@ if (today > nextBirthday) {
 const timeDifference = nextBirthday - today;
 const daysUntilBirthday = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
-const age = currentYear - birthYear;
+const nextAge = nextBirthday.getFullYear() - birthYear;
 
 
 //Event
@@ -144,7 +144,7 @@ function change() {
         countdownElement.textContent = birthdayString;
     }
     if (counter == 1) {
-        countdownElement.textContent = `${daysUntilBirthday} days until my ${age}-year-old birthday!`;
+        countdownElement.textContent = `${daysUntilBirthday} days until my ${nextAge}-year-old birthday!`;
     }
     document.getElementById("countdown").setAttribute("class", "text-show");
   }, 500)
