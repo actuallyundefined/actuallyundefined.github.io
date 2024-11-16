@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 default:
                     statusElement.classList.add('offline'); // Default to offline
             }
+
+            // Dynamic Avatar Update
+            const avatarID = data.data.discord_user.avatar;
+            document.getElementById("avatar").src="https://cdn.discordapp.com/avatars/794389736277803048/"+avatarID+".png";
         })
         .catch(error => {
             console.error('Error fetching the API:', error);
