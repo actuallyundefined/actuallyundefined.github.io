@@ -22,7 +22,7 @@ body {
 }
 
 .content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     position: relative;
 
@@ -40,30 +40,20 @@ body {
     }
 }
 
-.bio-text {
-    margin-left: 20px;
-    margin-top: 0;
-    line-height: 10px;
+.bio {
+    top: 40px
 }
 
 /* For large screens (PCs) */
-@media (min-width: 768px) {
-    .phone-warning {
-        display: none;
-    }
+@media (min-width: 769px) {
     .bio {
-        display: flex;
-        align-items: center;
+        position: sticky;
     }
 }
 
-/* For small screens (phones) */
-@media (max-width: 767px) {
-    .bio-text {
-        margin-left: 0px;
-        margin-top: 0;
-        line-height: 10px;
-    }
+.bio-text {
+    margin-top: 25px;
+    line-height: 10px;
 }
 
 .bio-avatar {
@@ -73,7 +63,7 @@ body {
 #bio-status {
     position: absolute;
     left: 110px;
-    top: 10px;
+    top: 70px;
     font-size: 70px;
 }
 .online { color: #43b581; } /* Green */
@@ -94,9 +84,12 @@ body {
     font-weight: normal;
     font-style: italic;
     font-size: 20px;
+    color: white;
 }
 
 .bio-social {
+    margin-top: 30px;
+    margin-bottom: 40px;
     font-size: 20px;
     word-spacing: 10px;
 }
@@ -121,7 +114,7 @@ a:visited {
 }
 
 .paragraph {
-    padding-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .icon-list {
@@ -184,11 +177,23 @@ a:visited {
     font-size: 20px;
 }
 
-#radio-text {
+#radio-bubble-1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 350px;
+    position: fixed;
+    bottom: 40px;
+}
+
+#radio-bubble-2 {
     position: fixed;
     bottom: 10px; /* Adjust the distance from the bottom */
     right: 10px;  /* Adjust the distance from the right */
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color with opacity */
+    background-color: rgba(255, 255, 255, 0.2); /* Optional: background color with opacity */
     color: white; /* Text color */
     padding: 10px; /* Padding around the text */
     border-radius: 5px; /* Rounded corners */
@@ -196,11 +201,47 @@ a:visited {
     text-align: right;
 }
 
-#radio-text-1 {
+#radio-text-1-1 {
     margin: 0px;
 }
 
-#radio-text-2 {
+#radio-text-1-2 {
     margin: 5px;
     font-size: x-small;
+}
+
+#radio-text-2-1 {
+    margin: 0px;
+}
+
+#radio-text-2-2 {
+    margin: 5px;
+    font-size: x-small;
+}
+
+#radio-status-2 {
+    color: white;
+    margin-top: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 48px;
+}
+
+/* For large screens (PCs) */
+@media (min-width: 769px) {
+    #radio-status-2 {
+        display: none;
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 768px) {
+    #radio-bubble-1 {
+        display: none;
+    }
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 }

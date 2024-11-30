@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Dynamic Avatar Update
             const avatarID = data.data.discord_user.avatar;
             document.getElementById("avatar").src="https://cdn.discordapp.com/avatars/794389736277803048/"+avatarID+".png";
+            //document.getElementById("website-icon").src="https://cdn.discordapp.com/avatars/794389736277803048/"+avatarID+".png";
         })
         .catch(error => {
             console.error('Error fetching the API:', error);
@@ -88,18 +89,19 @@ document.addEventListener('DOMContentLoaded', function() {
 function setRadioText() {
     var m = getMutedStatus();
     if (radioIsLoading) {
-        var mt = "(Loading...)"
+        var mt = "Loading"
     }
     else {
         if (m) {
-            var mt = "(Tap here to unmute)"
+            var mt = "🔇"
         }
         else {
-            var mt = "(Tap here to mute)"
+            var mt = "🔊"
         }
     }
-    document.getElementById("radio-text-1").textContent = "📻 My Little Radio!! " + mt;
-    document.getElementById("radio-text-2").textContent = radioPlayingSong;
+    document.getElementById("radio-text-1-1").textContent = mt+ " My Little Radio!! ";
+    document.getElementById("radio-text-1-2").textContent = radioPlayingSong;
+    document.getElementById("radio-status-2").textContent = mt;
 }
 
 function getMutedStatus() {
